@@ -72020,7 +72020,7 @@ A.Do.prototype={
 J(a){return new A.vU(new A.SP(),null)}}
 A.SP.prototype={
 $2(a,b){var s,r,q,p=null,o=b.b,n=o>600?4:2,m=A.bl(a,B.d5,t.w).w,l=A.yv("I'm a FullStack Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section. I also like sharing content related to the stuff that I have learned over the years in Web Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on my LinkedIn where I post useful content related to Web Development and Programming.\nI'm open to Job opportunities where I can contribute, learn, and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.",p,A.hF(p,p,A.a3(a).ax.b,p,p,p,p,p,p,p,p,16,p,p,B.a0,p,p,!0,p,p,p,p,p,p,p,p)),k=t.E,j=A.b([],k)
-for(s=["flutter","ae","androidstudio","c","dart","flask","discord","mongodb"],r=o/n-16,q=0;q<8;++q)j.push(new A.fj(r,p,new A.vx(A.aAm(p,p,new A.qb("https://skillicons.dev/icons?i="+s[q],1,p)),B.y_,p),p))
+for(s=["flutter","ae","androidstudio","c","dart","flask","discord","mongodb"],r=o/n-16,q=0;q<8;++q)j.push(new A.fj(r,p,new A.vx(A.aAm(p,p,new A.qb("https://cors-anywhere.herokuapp.com/https://skillicons.dev/icons?i="+s[q],1,p)),B.y_,p),p))
 return A.hy(A.pi(A.b([B.Cr,B.L8,l,B.L7,B.Cq,A.hy(new A.Kb(B.x9,16,16,j,p),p,o)],k),B.aa,B.ay,B.aU),m.a.b,p)},
 $S:464}
 A.wt.prototype={
