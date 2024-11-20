@@ -2,57 +2,126 @@
 <html>
 
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-
-  <!-- Description for SEO -->
   <meta name="description"
     content="Udhay Adithya's portfolio showcasing projects, skills, and experience in Flutter development.">
-
-  <!-- Keywords for SEO -->
   <meta name="keywords"
     content="Udhay Adithya, portfolio, Flutter developer, web development, mobile apps, software engineer">
-
-  <!-- Author -->
   <meta name="author" content="Udhay Adithya">
-
-  <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Udhay Adithya">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Open Graph meta tags for social media -->
   <meta property="og:title" content="Udhay Adithya">
   <meta property="og:description"
     content="Explore the projects and skills of Udhay Adithya, a skilled Flutter developer.">
   <meta property="og:image" content="assets/images/favicon.ico">
   <meta property="og:url" content="https://udhay.com">
   <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" type="assets/images/favicon.ico" href="favicon.ico" />
-
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <title>Udhay Adithya</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background-color: #ffffff;
+      /* Ensure background matches app */
+    }
+
+    svg.tea {
+      --secondary: #33406F;
+    }
+
+    #teabag {
+      transform-origin: top center;
+      transform: rotate(3deg);
+      animation: swing 2s infinite;
+    }
+
+    #steamL {
+      stroke-dasharray: 13;
+      stroke-dashoffset: 13;
+      animation: steamLarge 2s infinite;
+    }
+
+    #steamR {
+      stroke-dasharray: 9;
+      stroke-dashoffset: 9;
+      animation: steamSmall 2s infinite;
+    }
+
+    @keyframes swing {
+      50% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    @keyframes steamLarge {
+      0% {
+        stroke-dashoffset: 13;
+        opacity: 0.6;
+      }
+
+      100% {
+        stroke-dashoffset: 39;
+        opacity: 0;
+      }
+    }
+
+    @keyframes steamSmall {
+      10% {
+        stroke-dashoffset: 9;
+        opacity: 0.6;
+      }
+
+      80% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+      }
+
+      100% {
+        stroke-dashoffset: 27;
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <svg class="tea" width="37" height="48" viewBox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+        stroke="var(--secondary)" stroke-width="2" />
+      <path
+        d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+        stroke="var(--secondary)" stroke-width="2" />
+      <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd"
+        d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z" />
+      <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" stroke="var(--secondary)" />
+      <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <!-- Flutter app -->
+  <script>
+    // Remove preloader after Flutter initializes
+    window.addEventListener('flutter-first-frame', function () {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.style.display = 'none';
+      }
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 
